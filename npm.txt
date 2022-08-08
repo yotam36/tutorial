@@ -1,0 +1,10 @@
+local dependency- use the package only in this particular project
+npm i <packagename>
+
+glocal dependency- use package in any project
+npm install -g <packagename>
+sudo npm install -g <packagename>  // for mac
+
+package.json- manifest file. stores important information about the packageg in the project.
+manual create package.json- npm init (step by step).
+automatically create package.json- npm init -y (everything default).
