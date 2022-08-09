@@ -1,9 +1,12 @@
-const _ = require('lodash');
+const EventEmitter = require('events');
+const customEmitter = new EventEmitter();
 
-const items = [1,[2,[3,[4]]]];
-const newItems = _.flatMapDeep(items);
+customEmitter.on('resonse', (name, age) => {
+    console.log('data received ' + name + ': ' + age);
+})
 
-console.log(newItems);
+customEmitter.on('resonse', () => {
+    console.log('some other event2');
+})
 
-// https://youtu.be/Oe421EPjeBE?t=7399
-// 2:03:00
+customEmitter.emit('resonse', 'yotam',44);
